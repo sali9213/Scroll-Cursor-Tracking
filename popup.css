@@ -1,0 +1,59 @@
+body {
+  width: 200px;
+  padding: 20px;
+}
+/* button styles */
+button {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  outline: none;
+}
+button:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+button:active {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+/* create some space between lines */
+#clear,
+.recordingButtons {
+  margin-bottom: 10px;
+}
+
+/* text in button */
+span {
+  margin-left: 10px;
+}
+
+/* loader style */
+#report-loader {
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2px solid #3498db;
+  width: 16px;
+  height: 16px;
+  animation: spin 2s linear infinite;
+  display: none;
+}
+
+#hide-span {
+  display: none;
+}
+
+/* loader animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- extension popup window style -->
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+    <script src="loadhtml.js"></script>
+
+  </head>
+  <body onload=onLoad()>
+    <!-- play and pause buttons, buttons will be displayed or hidden based on recording status -->
+    <div class="recordingButtons">
+      <button type="button" id="start">
+        <img id="start-icon" src="image/start.png" />
+      </button>
+      <button type="button" id="pause">
+        <img id="pause-icon" src="image/pause.png" />
+      </button>
+    </div>
+    <!-- clear data button, data will accumulate unless cleared -->
+    <div class="dataManagementButtons">
+      <button type="button" id="clear">
+        <img id="clear-icon" src="image/trash.png" />
+        <span id="clear-span">Clear Data</span>
+      </button>
+    </div>
+    <!-- create report button, since it will take some time to generate a report, a loader will show during this period -->
+    <div class="dataManagementButtons">
+      <button type="button" id="report">
+        <img id="report-icon" src="image/heatmap.png" />
+        <span id="report-span">Show Heatmap</span>
+        <span id="hide-span">Hide Heatmap</span>
+        <div id="report-loader"></div>
+      </button>
+    </div>
+
+    <!-- Logical script for extension popup window -->
+    <script src="popup.js"></script>
+  </body>
+</html>
